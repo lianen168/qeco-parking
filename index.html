@@ -3,167 +3,478 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>qeco.ai</title>
-    <meta name="description" content="qeco.ai — Reserved domain. For strategic inquiries only.">
+    <title>QECO.AI | The Quantum Economy</title>
+    <meta name="description" content="Premium Domain Asset for Sale. The defining brand for Quantum Ecosystems, Quantum Economics, and Sustainable Q-Computing.">
+    <!-- Brand protection -->
+    <meta name="google" content="notranslate" />
+
+    <!-- Fonts: Space Grotesk (Tech) & Inter (Data) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
+        :root {
+            --bg-body: #010205; /* Deepest Void */
+            --bg-card: #060b14;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent-quantum: #00f0ff; /* Quantum Cyan */
+            --accent-eco: #00ff9d; /* Ecological Green */
+            --accent-purple: #7000ff; /* Deep Tech */
+            --border: rgba(0, 240, 255, 0.15);
+            --glow: rgba(0, 240, 255, 0.1);
+            --glow-strong: rgba(0, 255, 157, 0.2);
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
-            line-height: 1.6; 
-            color: #ffffff; 
-            background: linear-gradient(135deg, #050310 0%, #0a0618 100%);
-            min-height: 100vh; 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            justify-content: center; 
-            padding: 20px; 
-            text-align: center; 
-            position: relative; 
-            overflow-x: hidden; 
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
         }
-        .light-effect { 
-            position: absolute; 
-            top: 50%; 
-            left: 50%; 
-            width: min(120vw, 1000px); 
-            height: min(120vh, 1000px); 
-            background: radial-gradient(
-                circle at center,
-                rgba(96, 192, 255, 0.12) 0%,
-                rgba(176, 128, 255, 0.08) 30%,
-                transparent 70%
-            );
-            transform: translate(-50%, -50%); 
-            pointer-events: none; 
-            z-index: -1; 
+
+        .notranslate { translate: no; }
+        h1, h2, h3, .brand-font { font-family: 'Space Grotesk', sans-serif; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* --- Header --- */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            background: rgba(1, 2, 5, 0.9);
+            backdrop-filter: blur(15px);
+            z-index: 100;
         }
-        .container { 
-            max-width: 760px; 
-            width: 100%; 
-            padding: 70px 40px; 
-            background: rgba(8, 5, 16, 0.9);
-            backdrop-filter: blur(16px); 
-            border-radius: 28px; 
-            box-shadow: 
-                0 25px 80px rgba(0, 0, 0, 0.7),
-                0 0 0 1px rgba(96, 192, 255, 0.25),
-                inset 0 0 20px rgba(176, 128, 255, 0.1);
-            border: 1px solid rgba(96, 192, 255, 0.18); 
-            z-index: 1; 
+
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.2rem; font-weight: 700; letter-spacing: 1px; color: #fff; }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding: 80px 0 60px;
+            text-align: center;
+            background: radial-gradient(circle at center, var(--glow) 0%, transparent 70%);
+            overflow: hidden;
         }
-        h1 { 
-            font-size: clamp(4rem, 11vw, 6.8rem); /* 适配 8 字符，可更大 */
-            font-weight: 200; 
-            letter-spacing: 0.15em; 
-            margin-bottom: 35px; 
-            opacity: 0.98; 
-            text-transform: lowercase; 
-            color: #d0e8ff;
-            text-shadow: 0 0 12px rgba(96, 192, 255, 0.3);
+
+        /* --- DYNAMIC TYPOGRAPHY --- */
+        .mega-title {
+            font-size: clamp(3rem, 13vw, 10rem);
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: -0.04em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 5px;
         }
-        .domain { display: inline-block; transition: opacity 0.3s ease; }
-        .domain:hover { opacity: 0.85; }
-        p { 
-            font-size: clamp(1.2rem, 4.5vw, 1.6rem); 
-            opacity: 0.85; 
-            max-width: 640px; 
-            margin: 0 auto 45px; 
-            line-height: 1.8; 
-            color: #b0c8e8;
+
+        /* The "Q" - Superposition Effect */
+        .title-q {
+            color: transparent;
+            -webkit-text-stroke: 2px var(--accent-quantum);
+            position: relative;
+            text-shadow: 0 0 20px var(--accent-quantum);
+            animation: qubit-flicker 4s infinite;
         }
-        .note-section { 
-            background: rgba(14, 9, 24, 0.45); 
-            border-radius: 18px; 
-            padding: 28px; 
-            margin: 45px 0; 
-            border: 1px solid rgba(96, 192, 255, 0.22); 
+        
+        .title-q::after {
+            content: 'Q';
+            position: absolute;
+            left: 0; top: 0;
+            color: var(--accent-quantum);
+            opacity: 0.5;
+            filter: blur(8px);
+            animation: superposition 0.1s infinite;
         }
-        .note-text { 
-            font-size: 0.98rem; 
-            opacity: 0.75; 
-            line-height: 1.8; 
-            color: #90a8c8;
+
+        /* The "ECO" - Organic/Economic Growth */
+        .title-eco {
+            background: linear-gradient(135deg, #fff 0%, var(--accent-eco) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
         }
-        .contact-section { margin-top: 45px; }
-        .email-link { 
-            font-size: 1.5rem; 
-            color: #70b8ff; 
-            text-decoration: none; 
-            font-family: 'Courier New', monospace; 
-            padding: 12px 26px; 
-            background: rgba(96, 192, 255, 0.1); 
-            border-radius: 12px; 
-            display: inline-block; 
-            border: 1px solid rgba(96, 192, 255, 0.35); 
-            transition: all 0.3s ease; 
+
+        /* The ".AI" */
+        .title-tld {
+            color: var(--accent-purple);
+            -webkit-text-fill-color: var(--accent-purple);
+            font-size: 0.4em; 
+            align-self: flex-start;
+            margin-top: 25px;
+            text-shadow: 0 0 10px var(--accent-purple);
+            animation: pulse 3s infinite alternate;
         }
-        .email-link:hover { 
-            background: rgba(96, 192, 255, 0.2); 
+
+        /* Animations */
+        @keyframes qubit-flicker {
+            0%, 100% { opacity: 1; text-shadow: 0 0 20px var(--accent-quantum); }
+            50% { opacity: 0.8; text-shadow: 0 0 10px var(--accent-quantum); }
+            98% { opacity: 1; }
+            99% { opacity: 0.5; }
+        }
+
+        @keyframes superposition {
+            0% { transform: translate(1px, 0); }
+            25% { transform: translate(-1px, 1px); }
+            50% { transform: translate(0, -1px); }
+            75% { transform: translate(1px, 1px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
+
+        .hero-sub {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin: 25px auto 60px;
+            font-weight: 300;
+        }
+
+        .highlight-q { color: var(--accent-quantum); font-weight: 600; }
+        .highlight-eco { color: var(--accent-eco); font-weight: 600; }
+
+        /* --- Pricing Card --- */
+        .price-hero-card {
+            background: var(--bg-card);
+            border: 1px solid var(--accent-eco);
+            border-radius: 12px;
+            padding: 40px;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 0 60px rgba(0, 255, 157, 0.1);
+            position: relative;
+        }
+
+        .status-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(90deg, var(--accent-quantum), var(--accent-eco));
+            color: #000;
+            padding: 4px 16px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+
+        .price-main { font-size: 3rem; font-weight: 700; color: #fff; margin-bottom: 5px; }
+        .price-sub { font-size: 1.1rem; color: var(--accent-quantum); margin-bottom: 20px; }
+        
+        .buy-btn {
+            display: block;
+            width: 100%;
+            background: #fff;
+            color: #000;
+            font-weight: 700;
+            padding: 18px;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            margin-bottom: 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .buy-btn:hover { 
             transform: translateY(-3px); 
-            box-shadow: 0 8px 25px rgba(96, 192, 255, 0.25); 
+            background: var(--accent-eco);
+            box-shadow: 0 10px 30px rgba(0, 255, 157, 0.3);
         }
-        .contact-note { 
-            font-size: 0.95rem; 
-            opacity: 0.65; 
-            margin-top: 18px; 
-            font-style: italic; 
-            color: #7090b0;
+
+        /* --- Semantic Explanation Box --- */
+        .semantic-box {
+            margin-top: 40px;
+            padding: 25px;
+            border: 1px dashed var(--border);
+            border-radius: 8px;
+            text-align: center;
+            display: inline-block;
+            background: rgba(0, 240, 255, 0.02);
         }
-        .footer { 
-            position: absolute; 
-            bottom: 30px; 
-            font-size: 0.85rem; 
-            opacity: 0.4; 
-            width: 100%; 
-            text-align: center; 
-            color: #507090;
+        .semantic-tag {
+            display: inline-block;
+            margin: 5px 15px;
+            color: var(--text-muted);
+            font-size: 1rem;
+            font-family: 'Space Grotesk';
         }
-        @media (max-width: 768px) { 
-            .container { padding: 50px 30px; margin: 20px; } 
-            .email-link { font-size: 1.3rem; } 
-            h1 { 
-                font-size: clamp(3.4rem, 13vw, 5.4rem);
-                letter-spacing: 0.1em;
-            }
+        .semantic-tag span { font-weight: 700; font-size: 1.2rem;}
+        .tag-q { color: var(--accent-quantum); }
+        .tag-eco { color: var(--accent-eco); }
+
+        /* --- 12 Verticals Section --- */
+        .section-header { text-align: center; margin: 120px 0 60px; }
+        .section-header h2 { font-size: 2.5rem; margin-bottom: 15px; color: #fff; }
+        .section-header p { color: var(--text-muted); max-width: 650px; margin: 0 auto; }
+
+        .grid-12 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: linear-gradient(145deg, #0a0f18 0%, #010205 100%);
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 35px;
+            border-radius: 8px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 2px; height: 0%;
+            background: var(--accent-eco);
+            transition: height 0.4s;
+        }
+
+        .card:hover::before { height: 100%; }
+
+        .card:hover {
+            border-color: var(--accent-quantum);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px -10px rgba(0, 240, 255, 0.1);
+        }
+
+        .card h3 { 
+            font-size: 1.2rem; margin-bottom: 15px; color: #fff; display: flex; align-items: center; gap: 12px; 
+        }
+
+        .card h3 i { color: var(--accent-quantum); transition: color 0.3s; }
+        .card:hover h3 i { color: var(--accent-eco); }
+
+        .card p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px; line-height: 1.6; }
+        
+        .data-proof {
+            font-size: 0.85rem;
+            color: var(--accent-eco);
+            font-family: monospace;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 12px;
+            display: block;
+            opacity: 0.9;
+        }
+
+        /* --- Footer --- */
+        footer {
+            margin-top: 120px;
+            padding: 60px 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            background: #000;
+        }
+
+        .contact-email {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+            border-bottom: 2px solid var(--accent-quantum);
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Space Grotesk';
+        }
+        .contact-email:hover { color: var(--accent-quantum); border-bottom-color: transparent; }
+
+        @media (max-width: 768px) {
+            .grid-12 { grid-template-columns: 1fr; }
+            .mega-title { gap: 0; flex-direction: row; }
         }
     </style>
 </head>
 <body>
-    <div class="light-effect"></div>
-    <div class="container">
-        <h1><span class="domain">qeco.ai</span></h1>
-        <p>This domain is reserved.<br>Future project consideration.</p>
-        
-        <!-- 低调中性免责声明 -->
-        <div class="note-section">
-            <div class="note-text">
-                This domain is reserved for future development and is not associated with any third party.
-            </div>
-        </div>
-        
-        <!-- 联系方式 -->
-        <div class="contact-section">
-            <a href="#" class="email-link" aria-label="Send email">
-                <span id="email-display">joshua369x@gmail.com</span>
-            </a>
-            <div class="contact-note">
-                For strategic inquiries only.
-            </div>
-        </div>
-    </div>
 
-    <div class="footer">
-        © <span id="currentYear"></span> qeco.ai — All rights reserved.
-    </div>
+    <header>
+        <div class="container nav-flex">
+            <div class="logo notranslate">QECO.AI</div>
+            <a href="https://www.afternic.com/domain/qeco.ai" target="_blank" class="buy-btn" style="width: auto; padding: 10px 24px; margin:0; font-size: 0.9rem; border:none; background: #fff; color: #000;">
+                Purchase Asset
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <!-- DYNAMIC MEGA TITLE -->
+            <div class="mega-title notranslate">
+                <span class="title-q">Q</span>
+                <span class="title-eco">ECO</span>
+                <span class="title-tld">.AI</span>
+            </div>
+            
+            <p class="hero-sub">
+                The Inevitable Convergence. <br> 
+                Where <span class="highlight-q">Quantum Computing</span> meets <span class="highlight-eco">Economic Intelligence</span>.
+            </p>
+
+            <!-- PRICING BOX -->
+            <div id="purchase" class="price-hero-card">
+                <span class="status-badge">Tier 1 Strategic Asset</span>
+                <div class="price-main">$42,000 <span style="font-size:1rem; color:#888; font-weight:400;">USD</span></div>
+                <div class="price-sub">or $3,500/mo via 12-Month Financing</div>
+                
+                <!-- NEW TAB LINK -->
+                <a href="https://www.afternic.com/domain/qeco.ai" target="_blank" class="buy-btn">
+                    Secure This Asset Now <i class="fa-solid fa-arrow-up-right-from-square" style="margin-left: 8px; font-size: 0.8em;"></i>
+                </a>
+                
+                <p style="font-size: 0.85rem; color: #666;">
+                    <i class="fa-solid fa-lock"></i> Secured Escrow Transaction via Afternic/GoDaddy
+                </p>
+            </div>
+
+            <div class="semantic-box">
+                <div class="semantic-tag"><span class="tag-q">Q</span> = Quantum / Qubit / Question</div>
+                <div class="semantic-tag"><span class="tag-eco">ECO</span> = Economy / Ecosystem / Ecology</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12 VERTICALS -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h2>12 Pillars of the Quantum Economy</h2>
+                <p>Solving the world's most complex resource and optimization problems.</p>
+            </div>
+
+            <div class="grid-12">
+                <!-- 1. Quantum Finance -->
+                <div class="card">
+                    <h3><i class="fa-solid fa-chart-line"></i> Quantum Finance (Q-Fin)</h3>
+                    <p>Portfolio optimization and risk analysis using Quantum Monte Carlo simulations. The future of Wall Street.</p>
+                    <span class="data-proof">Market Potential: $2B+ by 2028</span>
+                </div>
+
+                <!-- 2. Green Tech -->
+                <div class="card">
+                    <h3><i class="fa-solid fa-leaf"></i> Quantum Ecology</h3>
+                    <p>Designing new catalysts for Carbon Capture. AI predicts candidates; Quantum Simulators validate them.</p>
+                    <span class="data-proof">Impact: Net Zero Acceleration</span>
+                </div>
+
+                <!-- 3. QML Hardware -->
+                <div class="card">
+                    <h3><i class="fa-solid fa-microchip"></i> Quantum AI Chips</h3>
+                    <p>The hardware infrastructure for Quantum Machine Learning. Processing data in high-dimensional Hilbert space.</p>
+                    <span class="data-proof">Keyword: QPU Architecture</span>
+                </div>
+
+                <!-- 4. Post-Quantum Security -->
+                <div class="card">
+                    <h3><i class="fa-solid fa-shield-halved"></i> Economic Security</h3>
+                    <p>Post-Quantum Cryptography (PQC). Securing the global economy against Q-Day threats.</p>
+                    <span class="data-proof">NIST Standards 2024/2025</span>
+                </div>
+
+                <!-- 5. Logistics -->
+                <div class="card">
+                    <h3><i class="fa-solid fa-truck-fast"></i> Supply Chain Q-Opt</h3>
+                    <p>Solving the Traveling Salesman Problem instantly. Optimizing global logistics networks to reduce waste.</p>
+                    <span class="data-proof">Efficiency Gain: 100x vs Classical</span>
+                </div>
+
+                <!-- 6. Pharma -->
+                <div class="card">
+                    <h3><i class="fa-solid fa-dna"></i> Molecular Ecosystems</h3>
+                    <p>Simulating protein folding and drug interactions at the atomic level. The bio-economy revolution.</p>
+                    <span class="data-proof">Sector: In-Silico Medicine</span>
+                </div>
+
+                <!-- 7. Energy -->
+                <div class="card">
+                    <h3><i class="fa-solid fa-battery-full"></i> Battery Chemistry</h3>
+                    <p>Discovering new materials for next-gen energy storage. Simulating chemical reactions impossible for classical computers.</p>
+                    <span class="data-proof">EV Market Critical Path</span>
+                </div>
+
+                <!-- 8. Cloud -->
+                <div class="card">
+                    <h3><i class="fa-solid fa-cloud"></i> QaaS Ecosystem</h3>
+                    <p>Quantum-as-a-Service. The cloud platform connecting businesses to quantum processors via AI APIs.</p>
+                    <span class="data-proof">Growth: 30% CAGR</span>
+                </div>
+
+                <!-- 9. Simulation -->
+                <div class="card">
+                    <h3><i class="fa-solid fa-globe"></i> Digital Twin Earth</h3>
+                    <p>Accurate climate modeling. Using Q-simulations to predict weather patterns and economic impacts.</p>
+                    <span class="data-proof">UN Sustainability Goals</span>
+                </div>
+
+                <!-- 10. DeFi -->
+                <div class="card">
+                    <h3><i class="fa-solid fa-coins"></i> Quantum DeFi</h3>
+                    <p>Decentralized Finance algorithms that leverage quantum randomness for true fairness and arbitrage.</p>
+                    <span class="data-proof">Web3 + Quantum Convergence</span>
+                </div>
+
+                <!-- 11. Communication -->
+                <div class="card">
+                    <h3><i class="fa-solid fa-network-wired"></i> Quantum Internet</h3>
+                    <p>Entanglement-based communication networks. The infrastructure for a secure global information economy.</p>
+                    <span class="data-proof">Tech: QKD Networks</span>
+                </div>
+
+                <!-- 12. General AI -->
+                <div class="card">
+                    <h3><i class="fa-solid fa-brain"></i> QNN (Quantum Neural Nets)</h3>
+                    <p>The path to AGI. Neural networks that learn faster and with less data using quantum superposition.</p>
+                    <span class="data-proof">Frontier Research</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <h3 style="margin-bottom: 20px; color: #fff;">Acquire This Legacy Brand</h3>
+            
+            <div class="contact-email" onclick="copyEmail()">
+                joshua369x@gmail.com
+            </div>
+            
+            <p style="margin-top: 15px; color: #666; font-size: 0.9rem;">Click email to copy to clipboard</p>
+            <p style="margin-top: 60px; font-size: 0.75rem; color: #444; text-transform: uppercase;">
+                &copy; 2026 <span class="notranslate">QECO.AI</span>. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
 
     <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-        const email = 'joshua369x' + '@' + 'gmail.com';
-        const subject = '?subject=Inquiry: qeco.ai';
-        const mailto = 'mailto:' + email + subject;
-        document.querySelector('.email-link').href = mailto;
-        document.getElementById('email-display').textContent = email;
+        function copyEmail() {
+            const email = "joshua369x@gmail.com";
+            navigator.clipboard.writeText(email).then(function() {
+                alert("Email address copied: " + email);
+            });
+        }
     </script>
 </body>
 </html>
